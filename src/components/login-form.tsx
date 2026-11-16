@@ -56,7 +56,7 @@ export function LoginForm({
         setServerError(error.message ?? 'Login failed. Please try again.')
         return
       }
-      router.replace('/')
+      router.replace('/connect-lastfm')
       router.refresh()
     },
   })

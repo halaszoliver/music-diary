@@ -7,6 +7,7 @@ export type User = {
   id: string
   name: string
   email: string
+  lastfmUsername: string | null
 }
 
 // Private cache: reads request headers, result stays per-user in the browser,
@@ -19,8 +20,8 @@ export async function getOptionalUser(): Promise<User | null> {
     return null
   }
 
-  const { id, name, email } = session.user
-  return { id, name, email }
+  const { id, name, email, lastfmUsername } = session.user
+  return { id, name, email, lastfmUsername: lastfmUsername ?? null }
 }
 
 export async function getCurrentUser(): Promise<User> {

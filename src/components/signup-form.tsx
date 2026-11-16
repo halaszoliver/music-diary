@@ -65,7 +65,7 @@ export function SignupForm({
         setServerError(error.message ?? 'Sign up failed. Please try again.')
         return
       }
-      router.replace('/')
+      router.replace('/connect-lastfm')
       router.refresh()
     },
   })

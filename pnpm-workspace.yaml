@@ -8,3 +8,6 @@ permissions:
 skills:
   dirs:
     - .claude/skills
+overrides:
+  '@types/react': 19.3.0
+  '@types/react-dom': 19.3.0
